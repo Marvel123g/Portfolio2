@@ -4,10 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+.mobile, .tablet {
+  display: none;
+}
 .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.underline {
+  border-bottom: 3px solid hsl(153, 71%, 59%);
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -8,3 +8,11 @@ $error: hsl(7,100%,68%);
 $green: hsl(153,71%,59%);
 $white: hsl(0,0%,100%);
 $white-lowop: hsla(0,0%,100%, .5);
+
+
+$breakpoints:(
+    xs:480px,
+    sm:640px,
+    md:768px,
+    lg:1024px
+);

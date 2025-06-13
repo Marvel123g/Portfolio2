@@ -1,5 +1,21 @@
+@use 'mixins' as *;
+@use 'variable' as *;
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: $black;
+    color: $white;
+}
+
+.mobile{
+    @include respond(lg);
+    display: none;
+}
+.tablet{
+    @extend .mobile;
 }
