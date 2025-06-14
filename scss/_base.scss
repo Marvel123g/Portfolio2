@@ -5,13 +5,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
     background-color: $black;
     color: $white;
 }
-
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
 .mobile{
     @include respond(lg);
     display: none;

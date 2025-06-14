@@ -2,11 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
   background-color: hsl(0, 0%, 8%);
   color: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .mobile, .tablet {
@@ -20,6 +28,70 @@ body {
 
 .underline {
   border-bottom: 3px solid hsl(153, 71%, 59%);
+}
+
+.ml {
+  margin-left: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.pb {
+  padding-bottom: 0.4rem;
+}
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 9.2rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 75%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  top: 0;
+}
+header .image-section .desktop {
+  width: 100%;
+  max-width: 500px;
+}
+
+.flex p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.about {
+  margin-top: 9rem;
+  position: relative;
+  left: 180px;
+}
+.about h1 {
+  font-size: 5rem;
+}
+.about p {
+  margin: 30px 0;
+  font-size: 1.2rem;
+  width: 60%;
+  text-wrap: wrap;
+}
+
+main {
+  margin-top: 30rem;
 }
 
 /*# sourceMappingURL=index.css.map */
