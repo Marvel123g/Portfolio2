@@ -11,17 +11,25 @@
 body{
     background-color: $black;
     color: $white;
+    @media (max-width:480px) {
+        width: 100%;
+        margin-left: 2rem;
+        // min-height: 100vh;
+    }
 }
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
+    @media (max-width:1200px) {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @media (max-width:640px) {
+        width: 70%;
+    }
 }
 .mobile{
-    @include respond(lg);
-    display: none;
-}
-.tablet{
-    @extend .mobile;
+    @include show-mobile-only;
 }

@@ -1,13 +1,34 @@
 @use 'variable' as *;
 
-@mixin respond ($breakpoint) {
-    $size :map-get($breakpoints, $breakpoint);
-    @if $size {
-        @media (max-width:$size){
-            @content;
-        }
+@mixin show-desktop-only {
+    $min: map-get($breakpoints, sm) + 1;
+  
+    display: none;
+    @media (min-width: #{$min}) {
+      display: block;
     }
-}
+  }
+  
+// @mixin show-tablet-only {
+//     $min: map-get($breakpoints, xs);
+//     $max: map-get($breakpoints, md);
+
+//     display: none;
+//     @media (min-width: #{$min}) and (max-width: #{$max}) {
+//         display: block;
+//     }
+//     @content;
+// }
+
+@mixin show-mobile-only {
+    $max: map-get($breakpoints, sm) - 1;
+
+    display: none;
+    @media (max-width: #{$max}) {
+        display: block;
+    }
+    @content;
+};
 @mixin flex{
     display: flex;
     align-items: flex-start;
