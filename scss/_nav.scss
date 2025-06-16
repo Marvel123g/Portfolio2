@@ -2,16 +2,11 @@
 
 nav{
     @include flex;
-    height: 9.2rem;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 75%;
-    @media (max-width:480px) {
-        width: 100%;
-    }
+    margin-top: 2rem;
+    padding: 0 7rem;
+    width: 100%;
     p{ 
         cursor: pointer;
         transition: transform 1s ease;
@@ -19,15 +14,14 @@ nav{
             transform: scale(1.1);
         }
     }
-    @media (max-width:1200px) {
-        width: 90%;
-        padding: 0 20px;
-    }
     @media (max-width:900px) {
         width: 100%;
+        padding:0 30px;
+        left: 0;
     }
 }
 .nav-links{
+    z-index: 999;
     a img{
         cursor: pointer;
         transition: transform 0.3s ease;

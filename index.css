@@ -8,11 +8,13 @@
 body {
   background-color: hsl(0, 0%, 8%);
   color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 480px) {
   body {
     width: 100%;
-    margin-left: 2rem;
   }
 }
 
@@ -33,13 +35,9 @@ body {
     width: 70%;
   }
 }
-
-.mobile {
-  display: none;
-}
-@media (max-width: 639px) {
-  .mobile {
-    display: block;
+@media (max-width: 480px) {
+  .container {
+    min-width: 350px;
   }
 }
 
@@ -73,18 +71,11 @@ nav {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 9.2rem;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 75%;
-}
-@media (max-width: 480px) {
-  nav {
-    width: 100%;
-  }
+  margin-top: 2rem;
+  padding: 0 7rem;
+  width: 100%;
 }
 nav p {
   cursor: pointer;
@@ -93,18 +84,17 @@ nav p {
 nav p:hover {
   transform: scale(1.1);
 }
-@media (max-width: 1200px) {
-  nav {
-    width: 90%;
-    padding: 0 20px;
-  }
-}
 @media (max-width: 900px) {
   nav {
     width: 100%;
+    padding: 0 30px;
+    left: 0;
   }
 }
 
+.nav-links {
+  z-index: 999;
+}
 .nav-links a img {
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -132,14 +122,8 @@ header {
 }
 header .image-section .desktop {
   width: 100%;
-  max-width: 450px;
-  min-height: 100vh;
-  display: none;
-}
-@media (min-width: 641px) {
-  header .image-section .desktop {
-    display: block;
-  }
+  max-width: 500px;
+  min-height: 90vh;
 }
 @media (max-width: 1200px) {
   header {
@@ -147,7 +131,8 @@ header .image-section .desktop {
   }
   header .image-section .desktop {
     position: relative;
-    right: -30px;
+    right: -10px;
+    z-index: -1;
   }
 }
 
@@ -167,7 +152,7 @@ header .image-section .desktop {
   }
 }
 .about h1 {
-  font-size: 4.5rem;
+  font-size: 3.8rem;
 }
 @media (max-width: 1060px) {
   .about h1 {
@@ -208,6 +193,12 @@ header .image-section .desktop {
   }
 }
 
+@media (max-width: 480px) {
+  .contact-me {
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+  }
+}
 .contact-me b {
   font-size: 18px;
   cursor: pointer;
@@ -267,7 +258,7 @@ hr {
   }
 }
 .text h1 {
-  font-size: 4.5rem;
+  font-size: 3.8rem;
 }
 @media (max-width: 480px) {
   .text h1 {

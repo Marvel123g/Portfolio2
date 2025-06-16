@@ -16,9 +16,8 @@ header{
     .image-section{
         .desktop{
             width: 100%;
-            max-width: 450px;
-            min-height: 100vh;
-            @include show-desktop-only;
+            max-width: 500px;
+            min-height: 90vh;
         }
     }
     @media (max-width:1200px) {
@@ -26,7 +25,8 @@ header{
         .image-section{
             .desktop{
                 position: relative;
-                right: -30px;
+                right: -10px;
+                z-index: -1;
             }
         }
     }
@@ -76,6 +76,10 @@ header{
     }
 }
 .contact-me{
+    @media (max-width:480px) {
+        margin-bottom: 2rem;
+        margin-top: -1rem;
+    }
     b{
         font-size: 18px;
         cursor: pointer;
