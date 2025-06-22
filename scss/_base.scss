@@ -31,9 +31,13 @@ body{
         width: 70%;
     }
     @media (max-width:480px) {
-        min-width: 350px;
+        min-width: 320px;
     }
 }
+
 // .mobile{
 //     @include show-mobile-only;
 // }
+.hidden{
+    display: none;
+}

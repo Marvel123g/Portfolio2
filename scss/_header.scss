@@ -39,7 +39,7 @@ header{
 }
 
 .about{
-    margin-top: 9rem;
+    margin-top: 8.5rem;
     position: relative;
     left: 180px;
     @media (max-width:900px) {
@@ -58,7 +58,7 @@ header{
         }
     }
     p{
-        margin:3rem 0;
+        margin:2rem 0;
         font-size: $fontSm;
         width: 60%;
         text-wrap: wrap;
@@ -76,7 +76,7 @@ header{
     }
 }
 .contact-me{
-    @media (max-width:480px) {
+    @media (max-width:640px) {
         margin-bottom: 2rem;
         margin-top: -1rem;
     }
@@ -85,6 +85,19 @@ header{
         cursor: pointer;
         &:hover{
             color: $green;
+        }
+    }
+    .mobile-no{
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .gmail{
+        margin-top: 20px;
+        a{
+            text-decoration: underline;
+            color: $white;
         }
     }
 }
