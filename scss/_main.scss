@@ -3,13 +3,16 @@
 @use 'variable' as *;
 
 .skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include grid;
     grid-gap: 50px;
     margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     @media (max-width:640px) {
         grid-template-columns: 1fr;
         text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -17,10 +20,7 @@
     h1{
         font-size: 2rem;
         @media (max-width:900px) {
-            font-size:2.5rem ;
-        }
-        @media (max-width:400px) {
-            font-size:2rem ;
+            font-size:1.5rem ;
         }
     }
 }
@@ -30,7 +30,19 @@ hr{
     height: 3px;
     background-color: $white;
 }
-.text{
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width:640px) {
+        margin-top: -3rem;
+    }
+}
+
+.project-text{
+    @include flex;
+    width: 90%;
     margin-bottom: 7rem;
     @media (max-width:640px) {
         margin-bottom: 3rem;
@@ -53,24 +65,10 @@ hr{
             color: $green;
         }
     }
-}
-.project-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (max-width:640px) {
-        margin-top: -3rem;
-    }
-    .text{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
+  
 }
 .desktop-project{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid;
     gap: 30px;
     @media (max-width:640px) {
         grid-template-columns: 1fr;
@@ -118,6 +116,5 @@ hr{
                 color: $green;
             }
         }
-    }
-   
+    } 
 }

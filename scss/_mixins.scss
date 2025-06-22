@@ -7,30 +7,13 @@
     @media (min-width: #{$min}) {
       display: block;
     }
-  }
-  
-// @mixin show-tablet-only {
-//     $min: map-get($breakpoints, xs);
-//     $max: map-get($breakpoints, md);
-
-//     display: none;
-//     @media (min-width: #{$min}) and (max-width: #{$max}) {
-//         display: block;
-//     }
-//     @content;
-// }
-
-@mixin show-mobile-only {
-    $max: map-get($breakpoints, sm) - 1;
-
-    display: none;
-    @media (max-width: #{$max}) {
-        display: block;
-    }
-    @content;
-};
+}
 @mixin flex{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
+}
+@mixin grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

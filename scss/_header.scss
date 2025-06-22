@@ -2,10 +2,7 @@
 @use 'mixins' as *;
 
 header{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    top: 0;
+    @include grid;
     @media (max-width:640px) {
         display: flex;
         justify-self: center;
@@ -13,22 +10,10 @@ header{
         align-items: center;
         text-align: center;
     }
-    .image-section{
-        .desktop{
-            width: 100%;
-            max-width: 500px;
-            min-height: 90vh;
-        }
-    }
-    @media (max-width:1200px) {
+    .desktop{
         width: 100%;
-        .image-section{
-            .desktop{
-                position: relative;
-                right: -10px;
-                z-index: -1;
-            }
-        }
+        max-width: 500px;
+        min-height: 100vh;
     }
 }
 .flex {
@@ -41,9 +26,13 @@ header{
 .about{
     margin-top: 8.5rem;
     position: relative;
-    left: 180px;
-    @media (max-width:900px) {
-        margin-left: -3rem;
+    left: 100px;
+    width: 100%;
+    @media (max-width:1200px) {
+        left: 30px;
+    }
+    @media (max-width:640px) {
+        left: 0 !important;
     }
     h1{
         font-size: $fontXl;
@@ -53,7 +42,7 @@ header{
         @media (max-width:900px) {
             font-size:3rem ;
         }
-        @media (max-width:697px) {
+        @media (max-width:710px) {
             font-size:2.5rem ;
         }
     }
@@ -70,9 +59,6 @@ header{
             width: 100%;
             padding: 0 1rem;
         }
-    }
-    @media (max-width:1200px) {
-        left: 30px;
     }
 }
 .contact-me{
@@ -92,6 +78,11 @@ header{
         flex-direction: column;
         font-weight: bold;
         margin-top: 20px;
+        b{
+            text-decoration: underline;
+            margin-bottom: 10px;
+            color: $white-lowop;
+        }
     }
     .gmail{
         margin-top: 20px;

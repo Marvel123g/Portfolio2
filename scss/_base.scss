@@ -11,33 +11,12 @@
 body{
     background-color: $black;
     color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (max-width:480px) {
-        width: 100%;
-    }
 }
-.container{
+.portfolio-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    @media (max-width:1200px) {
-        width: 90%;
-        margin: 0 auto;
-    }
-    @media (max-width:640px) {
-        width: 70%;
-    }
-    @media (max-width:480px) {
-        min-width: 320px;
-    }
 }
-
-// .mobile{
-//     @include show-mobile-only;
-// }
 .hidden{
     display: none;
 }
