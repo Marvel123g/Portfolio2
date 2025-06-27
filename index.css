@@ -253,7 +253,7 @@ hr {
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 @media (max-width: 640px) {
   .project-text {
@@ -302,13 +302,30 @@ hr {
   transform: scale(1.05);
   opacity: 0.6;
 }
+@media (max-width: 640px) {
+  .desktop-project .my-project:hover img {
+    opacity: 1;
+    transform: none;
+  }
+}
 .desktop-project .my-project:hover .hover {
   opacity: 1;
+}
+@media (max-width: 640px) {
+  .desktop-project .my-project:hover .hover {
+    opacity: 1;
+    pointer-events: none;
+  }
 }
 .desktop-project .my-project img {
   width: 100%;
   max-width: 600px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 640px) {
+  .desktop-project .my-project img {
+    transition: none;
+  }
 }
 .desktop-project .my-project .hover {
   position: absolute;
@@ -324,6 +341,17 @@ hr {
   gap: 1rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+@media (max-width: 640px) {
+  .desktop-project .my-project .hover {
+    top: 1.2rem;
+    left: -11rem;
+    position: relative;
+    flex-direction: row;
+    height: 5%;
+    background-color: transparent;
+    opacity: 1;
+  }
 }
 .desktop-project .my-project .hover-btn {
   color: white;

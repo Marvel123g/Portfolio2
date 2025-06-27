@@ -43,7 +43,7 @@ hr{
 .project-text{
     @include flex;
     width: 90%;
-    margin-bottom: 7rem;
+    margin-bottom: 4rem;
     @media (max-width:640px) {
         margin-bottom: 3rem;
     }
@@ -80,14 +80,27 @@ hr{
         &:hover img{
             transform: scale(1.05);
             opacity: 0.6;
+            @media (max-width:640px) {
+                opacity: 1;
+                transform: (none);
+            }
         }
         &:hover .hover{
             opacity: 1;
+        }
+         @media (max-width:640px) {
+            &:hover .hover{
+                opacity: 1;
+                pointer-events: none;
+            }
         }
         img{
             width: 100%;
             max-width: 600px;
             transition: transform 0.3s ease, opacity 0.3s ease;
+            @media (max-width:640px) {
+                transition: none;
+            }
         }
         .hover{
             position: absolute;
@@ -103,6 +116,15 @@ hr{
             gap: 1rem;
             opacity: 0;
             transition: opacity 0.3s ease;
+            @media (max-width:640px) {
+                top:1.2rem;
+                left: -11rem;
+                position: relative;
+                flex-direction: row;
+                height: 5%;
+                background-color: transparent;
+                opacity: 1;
+            }
         }
         .hover-btn{
             color: white;
