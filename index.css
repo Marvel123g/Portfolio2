@@ -205,6 +205,28 @@ header .desktop {
 }
 
 .skills {
+  display: flex;
+  flex-direction: column;
+}
+.skills h1 {
+  font-size: 3rem;
+  margin-left: 2rem;
+  width: 12%;
+  min-width: 120px;
+  margin-top: 20px;
+}
+@media (max-width: 640px) {
+  .skills h1 {
+    margin-left: 0;
+  }
+}
+@media (max-width: 640px) {
+  .skills {
+    align-items: center;
+  }
+}
+
+.skills-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
@@ -213,7 +235,7 @@ header .desktop {
   margin-right: 50px;
 }
 @media (max-width: 640px) {
-  .skills {
+  .skills-list {
     grid-template-columns: 1fr;
     text-align: center;
     margin-left: 10px;
@@ -221,11 +243,11 @@ header .desktop {
   }
 }
 
-.item h1 {
-  font-size: 2rem;
+.item h2 {
+  font-size: 2.2rem;
 }
 @media (max-width: 900px) {
-  .item h1 {
+  .item h2 {
     font-size: 1.5rem;
   }
 }
@@ -314,7 +336,6 @@ hr {
 @media (max-width: 640px) {
   .desktop-project .my-project:hover .hover {
     opacity: 1;
-    pointer-events: none;
   }
 }
 .desktop-project .my-project img {
@@ -345,9 +366,11 @@ hr {
 @media (max-width: 640px) {
   .desktop-project .my-project .hover {
     top: 1.2rem;
-    left: -11rem;
+    margin-left: 0.7rem;
+    left: 0 !important;
     position: relative;
     flex-direction: row;
+    justify-content: flex-start;
     height: 5%;
     background-color: transparent;
     opacity: 1;

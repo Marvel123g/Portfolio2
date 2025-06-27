@@ -2,7 +2,25 @@
 @use 'mixins' as *;
 @use 'variable' as *;
 
+
 .skills{
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size: 3rem;
+        margin-left: 2rem;
+        width: 12%;
+        min-width: 120px;
+        margin-top: 20px;
+        @media (max-width:640px) {
+            margin-left: 0;
+        }
+    }
+    @media (max-width:640px) {
+        align-items: center;
+    }
+}
+.skills-list{
     @include grid;
     grid-gap: 50px;
     margin-top: 50px;
@@ -17,8 +35,8 @@
 }
 
 .item{
-    h1{
-        font-size: 2rem;
+    h2{
+        font-size: 2.2rem;
         @media (max-width:900px) {
             font-size:1.5rem ;
         }
@@ -91,7 +109,7 @@ hr{
          @media (max-width:640px) {
             &:hover .hover{
                 opacity: 1;
-                pointer-events: none;
+                // pointer-events: none;
             }
         }
         img{
@@ -118,9 +136,11 @@ hr{
             transition: opacity 0.3s ease;
             @media (max-width:640px) {
                 top:1.2rem;
-                left: -11rem;
+                margin-left: .7rem;
+                left: 0 !important;
                 position: relative;
                 flex-direction: row;
+                justify-content: flex-start;
                 height: 5%;
                 background-color: transparent;
                 opacity: 1;
